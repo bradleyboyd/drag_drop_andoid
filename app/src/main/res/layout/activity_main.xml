@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/your_outer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:weightSum="1">
+
+    <LinearLayout
+        android:id="@+id/Ofiller"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:orientation="horizontal">
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/your_second_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_gravity="center"
+        android:weightSum="1"> <!-- note that vertical is the default -->
+
+        <!-- Other elements here -->
+
+        <LinearLayout
+            android:id="@+id/filler"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="0.1"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/eighty_percent_layout_holder"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:layout_gravity="center"
+            android:background="@drawable/rectanglebg">
+
+            <TextView
+                android:id="@+id/draggableImage"
+                android:layout_width="100px"
+                android:layout_height="29dp"
+                android:background="@color/red"
+                android:baselineAligned="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/filler2"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="0.1"
+            android:orientation="horizontal">
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
