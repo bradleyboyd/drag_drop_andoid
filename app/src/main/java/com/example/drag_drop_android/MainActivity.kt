@@ -71,6 +71,7 @@ class MainActivity : AppCompatActivity() {
                     y_loc = y_min
                 }
 
+
                 //view.y = motionEvent.rawY - view.height - (0.1*(height).toDouble()).toInt()
                 //view.x = motionEvent.rawX  - view.width/2 - (0.1*(width).toDouble()).toInt()
 
